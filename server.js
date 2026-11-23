@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 const rooms = new Map();
 const questions = [
  ['Friendships','Your best friend should not be friends with your enemy.'],
